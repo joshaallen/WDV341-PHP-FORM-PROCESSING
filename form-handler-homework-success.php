@@ -1,11 +1,10 @@
 <?php
-//Model-Controller Area.  The PHP processing code goes in this area.
-require_once('functions.php');
-
-// PHP form submission code goes here
-
-
-
+/**
+ * Model-Controller Area.  The PHP processing code goes in this area.
+ * 
+ * PHP form submission code goes here
+ * 
+ */
 //selection stucture to determine if form was submittedd
 if(isset($_POST["button"])) {
     //selection structure to determine if honey pot name value pair was submitted
@@ -19,7 +18,12 @@ if(isset($_POST["button"])) {
         $last_name = trim($_POST["last_name"]);
         $email = trim($_POST["email"]);
         $subscribe = $_POST["subscribe"];
-        $offers = $_POST["offers"];
+        if(isset($_POST["offers"])) {
+            $offers = $_POST["offers"];
+        }
+        else {
+            $offers = "No offer selected";
+        }
         $find = $_POST["find"]; 
         
     ?>
@@ -47,7 +51,8 @@ if(isset($_POST["button"])) {
     <section>
         <h2>Newsletter Signup</h2>
         <p>"Thank you <?php echo $first_name . " " . $last_name ;?> "</p>
-        <p>Recieve Special Offers: <?php echo $subscribe;?></p>
+        <p>Subscription Type: <?php echo $subscribe;?></p>
+        <p>Recieve Special Offers: <?php echo $offers;?></p>
         <p>How you found us: <?php echo $find; ?></p>
         <p>A signup confirmation has been sent to <?php echo $email; ?>. Thank you for your support!</p>
     </section>

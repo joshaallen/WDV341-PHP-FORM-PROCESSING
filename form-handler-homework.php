@@ -45,7 +45,7 @@
             <p>
                 <label for="offers">Recieve special offers and latest updates?</label>
                 <label for="offers">Yes</label>
-                <input type="checkbox" name="offers" id="offers" value="yes" required>
+                <input type="checkbox" name="offers" id="offers" value="yes">
             </p>
             <p>
             <label for="">How did you find us?</label>
