@@ -26,7 +26,7 @@
 
     <section>
         <h2>Welcome to the Pot!!!</h2>
-        //IP addrecss caught in Honey POT 
+        <!--IPaddress has been caught in Honey POT--> 
         <p>Your IP is: <?php echo $_GET['ip'];?></p>
     </section>
 </body>
